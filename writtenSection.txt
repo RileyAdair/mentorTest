@@ -1,28 +1,41 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+Semantic HTML is a better way to describe markup using self describing tags. It reinforces the meaning of the information in web pages and helps in SEO as well.
 
 2. What is the box model?
+The box model is a css term to describe the box or container of every html element. It consists of the element's content, padding, border, and margin.
 
 3. What is the difference between IDs and Classes?
+IDs are used to select one unique element within a page. Where as Classes can select multiple elements.
 
 4. What does the z-index do?
+Z-index sets the stack order of elements. An element with a higher z-index will display in front of an element with a lower z-index. Also, z-index only works with elements that are positioned.
 
 5. Summarize what the keyword 'this' is used for?
+Whenever a function is invoked, it is given data about the context or where it was invoked from. The keyword 'this' is used to give access to context. It is a pointer that refers to and holds the value of an object.
 
 6. What is a callback?
+A callback is a function passed to another function as a parameter, and the callback function is called or executed inside the other function.
 
 7. What is a closure?
+Closure is a function within a function. The inner functions have access to local variables and variables in the parent's scope as well. It is also makes private variables inaccessible outside of the closure.
 
 8. How does prototype work?
+Every object has a prototype object, which is where the object's properties and methods are inherited from. The prototype property allows us to add new properties to an existing prototype.
 
 9. What is MVC?
+MVC is a framework which stands for Model, View, Controller. The Model is the data we're working with. The View is what is displayed. The Controller essentially controls what data gets bound to the view.
 
 10. What is the component lifecycle?
+The component lifecycle is the order in which a component is rendered and destroyed on the DOM. In angular it's called the digest loop. In react it's the component life-cycle.
+React has a series of methods we can implement/override to tap into this life-cycle process. They consist of three phases: Birth/Mounting, Growth/Update, and Death/Unmount.
 
 11. What is REST?
+REST or Representational State Transfer, is a protocol for web requests. Rest uses GET to ask for data, PUT to update data, POST to add data, and DELETE to remove data.
 
 12. Name three ways of getting data from the URL using express
+GET, POST, and PUT requests
 
 create table users (
 id serial,
@@ -33,9 +46,17 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+SELECT * FROM users;
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+INSERT INTO users (name, email)
+VALUES ('Riley Adair', 'fake@fake.com');
 
 -Update the newly created user's name to 'Bobby Boy':
+UPDATE users
+SET name = 'Bobby Boy'
+WHERE name = 'Riley Adair';
 
 -Delete the newly updated user:
+DELETE FROM users
+WHERE name = 'Bobby Boy';
